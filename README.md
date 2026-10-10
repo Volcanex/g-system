@@ -1,3 +1,5 @@
+<img src="docs/brand/icon.svg" width="72" alt="G-System logo">
+
 # G-System
 
 G-System is my setup for running coding agents on servers I own. Claude Code and Codex sessions live and work on one central server, and that server manages the other hosts: a production host for deployed projects, a worker host for long jobs, and a Mac. The agents get the same tools on every host, and the system around them remembers what they learned and tells me when something breaks.
@@ -62,6 +64,12 @@ Each fact lands in one store, picked by its kind. A fact with a date goes to g-t
 
 I took these from a second copy of the dashboard reading live data, then replaced names, addresses, amounts and note titles with placeholders. A blurred value is private. The states are real, so a service shown down was down.
 
+![Brain in 3D: every note in the brain as a node, coloured by kind, with its links](docs/screens/web-brain-3d.png)
+The brain in 3D. Each point is a note, coloured by kind, and the clusters form around the index notes that link them.
+
+![Model selection: why g-pick chose a model for a job, and quality against price with the line of equal score](docs/screens/web-compute-pick.png)
+How g-pick chooses a model for a job. Each bar adds up quality, quota price and speed for one model at one effort. On the chart, any agent above the line would beat the pick.
+
 | | |
 |---|---|
 | ![System page, dark theme](docs/screens/web-system-dark.png) System health, dark | ![System page, light theme](docs/screens/web-system-light.png) System health, light |
@@ -75,4 +83,4 @@ I'm splitting the framework from my own instance in October 2026, and a few piec
 
 ## Licence
 
-Every `g-` repo is source-available under PolyForm Noncommercial 1.0.0, and so is this one. It is not open source. See [LICENSE](LICENSE).
+Every `g-` repo is open source under the GNU Affero General Public License v3.0, and so is this one. You can use, change and share it, commercially too, as long as you share your changes under the same licence. That covers running a changed copy as a web service, whose users get the source. See [LICENSE](LICENSE).

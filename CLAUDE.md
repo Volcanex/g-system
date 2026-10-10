@@ -5,13 +5,16 @@ screenshots. It holds no code. Each component lives in its own `g-` repo, linked
 and pinned here as a submodule.
 
 **Owner:** Gabriel Penman
-**Licence:** PolyForm Noncommercial 1.0.0 (`LICENSE`), source-available. Never call it open source.
+**Licence:** GNU AGPL v3.0 only (`LICENSE`, SPDX `AGPL-3.0-only`), the same as every `g-` repo. Keep
+`LICENSE` byte for byte as GitHub serves it, so GitHub detects it.
 
 ## Layout
 - `README.md`: what G-System is, the component table, framework and instance, the screenshots.
 - `INSTALL.md`: written for an AI agent installing on a fresh Linux server, with the desktop app
   on a Mac.
 - `docs/diagrams/*.svg`: hand-authored, no build step.
+- `docs/brand/icon.svg`: the G mark from g-design's g-brand package, in the README header. It
+  carries its own background, so it reads on light and dark.
 - `docs/screens/*.png`: redacted screenshots of g-command-web and g-command-mac.
 - `.gitmodules`: the nine public framework repos at the root, `branch = main`, pinned to their
   released commits. When a part ships a change the install guide depends on, run
@@ -47,4 +50,7 @@ because the command lines hold home paths. The desktop panel comes from g-comman
 `GCM_REDACT` set, run with `TZ=Europe/London` and an en-GB locale for the same reason.
 Blur the hours worked on /compute and the Used and Created times in the Workspace 3 and 4 cards.
 Wrap the text in a span with `filter: blur(6px)`, because a blurred cell smears its table border.
-Quantise PNGs to 256 colours to keep them under about 50 KB.
+Quantise PNGs to 256 colours to keep them under about 50 KB. The two feature crops at the top of the
+screenshots are element screenshots at device scale 2, quantised to 128 colours. The Brain in 3D
+panel needs WebGL, so launch headless Chromium with `--use-angle=swiftshader
+--enable-unsafe-swiftshader` and wait about ten seconds for the layout to settle.
