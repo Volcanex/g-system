@@ -1,0 +1,36 @@
+[submodule "g-core"]
+	path = g-core
+	url = https://github.com/Volcanex/g-core.git
+	branch = main
+[submodule "g-env"]
+	path = g-env
+	url = https://github.com/Volcanex/g-env.git
+	branch = main
+[submodule "g-env-linux"]
+	path = g-env-linux
+	url = https://github.com/Volcanex/g-env-linux.git
+	branch = main
+[submodule "g-brain"]
+	path = g-brain
+	url = https://github.com/Volcanex/g-brain.git
+	branch = main
+[submodule "g-command-web"]
+	path = g-command-web
+	url = https://github.com/Volcanex/g-command-web.git
+	branch = main
+[submodule "g-command-mac"]
+	path = g-command-mac
+	url = https://github.com/Volcanex/g-command-mac.git
+	branch = main
+[submodule "g-design"]
+	path = g-design
+	url = https://github.com/Volcanex/g-design.git
+	branch = main
+[submodule "g-browser"]
+	path = g-browser
+	url = https://github.com/Volcanex/g-browser.git
+	branch = main
+[submodule "g-seed"]
+	path = g-seed
+	url = https://github.com/Volcanex/g-seed.git
+	branch = main

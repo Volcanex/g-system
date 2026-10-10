@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 512" width="960" height="512" role="img" aria-labelledby="title desc">
+  <title id="title">G-System information flow</title>
+  <desc id="desc">Inlets, agents, voice and health probes write into g-pulse, g-brain, g-todos and g-spine. The brain host serves the stores over /api and /mcp to the dashboard, agents and desktop app. g-spine publishes alerts to one ntfy topic, which reaches the phone and the desktop app.</desc>
+  <style>
+    text { font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .mono { font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .bg { fill: #fcfcfd; stroke: #d9d9e0; }
+    .box { fill: #f9f9fb; stroke: #cdced6; }
+    .chip { fill: #f0f0f3; stroke: #d9d9e0; }
+    .t1 { fill: #1c2024; }
+    .t2 { fill: #60646c; }
+    .ln { stroke: #8b8d98; fill: none; }
+    .ar { fill: #8b8d98; }
+    .c1 { fill: #0090ff; } .c2 { fill: #6e56cf; } .c3 { fill: #12a493; }
+    .c4 { fill: #c88515; } .c5 { fill: #e93d82; } .c6 { fill: #45a557; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #111113; stroke: #363a3f; }
+      .box { fill: #18191b; stroke: #43484e; }
+      .chip { fill: #212225; stroke: #363a3f; }
+      .t1 { fill: #edeef0; }
+      .t2 { fill: #b0b4ba; }
+      .ln { stroke: #696e77; }
+      .ar { fill: #696e77; }
+      .c3 { fill: #12a594; } .c4 { fill: #ffc53d; } .c6 { fill: #46a758; }
+    }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+      <path class="ar" d="M0 0 L8 4 L0 8 z"/>
+    </marker>
+  </defs>
+
+    <rect class="bg" x="0.5" y="0.5" width="959" height="511" rx="12"/>
+  <text class="t1" x="32" y="44" font-size="18" font-weight="600">Information flow</text>
+  <text class="t2" x="32" y="68" font-size="13">Each fact lands in one store by kind: a date goes to g-todos, true now to g-pulse, true always to g-brain.</text>
+  <text class="t2" x="32" y="112" font-size="12" font-weight="600">Sources</text>
+  <text class="t2" x="272" y="112" font-size="12" font-weight="600">Stores</text>
+  <text class="t2" x="536" y="112" font-size="12" font-weight="600">Serving</text>
+  <text class="t2" x="768" y="112" font-size="12" font-weight="600">Readers and devices</text>
+  <rect class="box" x="32" y="128" width="184" height="64" rx="9.5"/>
+  <rect class="c2" x="32" y="144" width="3" height="32" rx="1.5"/>
+  <text class="t1" x="48" y="154" font-size="13" font-weight="600">Inlets</text>
+  <text class="t2" x="48" y="174" font-size="12">Mail, feeds, webhooks</text>
+  <rect class="box" x="32" y="208" width="184" height="64" rx="9.5"/>
+  <rect class="c1" x="32" y="224" width="3" height="32" rx="1.5"/>
+  <text class="t1" x="48" y="234" font-size="13" font-weight="600">Agents</text>
+  <text class="t2" x="48" y="254" font-size="12">Claude Code and Codex</text>
+  <rect class="box" x="32" y="288" width="184" height="64" rx="9.5"/>
+  <rect class="c5" x="32" y="304" width="3" height="32" rx="1.5"/>
+  <text class="t1" x="48" y="314" font-size="13" font-weight="600">Voice</text>
+  <text class="t2" x="48" y="334" font-size="12">WhatsApp and web</text>
+  <rect class="box" x="32" y="408" width="184" height="64" rx="9.5"/>
+  <rect class="c4" x="32" y="424" width="3" height="32" rx="1.5"/>
+  <text class="t1" x="48" y="434" font-size="13" font-weight="600">Health probes</text>
+  <text class="t2" x="48" y="454" font-size="12">Every service</text>
+  <rect class="box" x="272" y="128" width="208" height="64" rx="9.5"/>
+  <rect class="c2" x="272" y="144" width="3" height="32" rx="1.5"/>
+  <text class="t1 mono" x="288" y="154" font-size="13" font-weight="600">g-pulse</text>
+  <text class="t2" x="288" y="174" font-size="12">True now: live state</text>
+  <rect class="box" x="272" y="208" width="208" height="64" rx="9.5"/>
+  <rect class="c2" x="272" y="224" width="3" height="32" rx="1.5"/>
+  <text class="t1 mono" x="288" y="234" font-size="13" font-weight="600">g-brain</text>
+  <text class="t2" x="288" y="254" font-size="12">True always: the corpus</text>
+  <rect class="box" x="272" y="288" width="208" height="64" rx="9.5"/>
+  <rect class="c2" x="272" y="304" width="3" height="32" rx="1.5"/>
+  <text class="t1 mono" x="288" y="314" font-size="13" font-weight="600">g-todos</text>
+  <text class="t2" x="288" y="334" font-size="12">Has a date: reminders</text>
+  <rect class="box" x="272" y="408" width="208" height="64" rx="9.5"/>
+  <rect class="c4" x="272" y="424" width="3" height="32" rx="1.5"/>
+  <text class="t1 mono" x="288" y="434" font-size="13" font-weight="600">g-spine</text>
+  <text class="t2" x="288" y="454" font-size="12">Alerts, dedup, status</text>
+  <rect class="box" x="536" y="128" width="176" height="224" rx="9.5"/>
+  <text class="t1" x="552" y="154" font-size="13" font-weight="600">Brain host</text>
+  <text class="t2" x="552" y="174" font-size="12">/api for the web</text>
+  <text class="t2" x="552" y="192" font-size="12">/mcp for agents</text>
+  <text class="t2" x="552" y="210" font-size="12"></text>
+  <text class="t2" x="552" y="228" font-size="12">One process</text>
+  <text class="t2" x="552" y="246" font-size="12">on one port</text>
+  <rect class="box" x="536" y="408" width="176" height="64" rx="9.5"/>
+  <text class="t1" x="552" y="434" font-size="13" font-weight="600">ntfy topic</text>
+  <text class="t2" x="552" y="454" font-size="12">One fan-out point</text>
+  <rect class="box" x="768" y="128" width="160" height="64" rx="9.5"/>
+  <rect class="c6" x="768" y="144" width="3" height="32" rx="1.5"/>
+  <text class="t1 mono" x="784" y="154" font-size="13" font-weight="600">g-command-web</text>
+  <text class="t2" x="784" y="174" font-size="12">Dashboard</text>
+  <rect class="box" x="768" y="208" width="160" height="64" rx="9.5"/>
+  <rect class="c1" x="768" y="224" width="3" height="32" rx="1.5"/>
+  <text class="t1" x="784" y="234" font-size="13" font-weight="600">Agents</text>
+  <text class="t2" x="784" y="254" font-size="12">Read through MCP</text>
+  <rect class="box" x="768" y="288" width="160" height="64" rx="9.5"/>
+  <rect class="c6" x="768" y="304" width="3" height="32" rx="1.5"/>
+  <text class="t1 mono" x="784" y="314" font-size="13" font-weight="600">g-command-mac</text>
+  <text class="t2" x="784" y="334" font-size="12">Desktop app</text>
+  <rect class="box" x="768" y="408" width="160" height="64" rx="9.5"/>
+  <rect class="c5" x="768" y="424" width="3" height="32" rx="1.5"/>
+  <text class="t1" x="784" y="434" font-size="13" font-weight="600">Phone</text>
+  <text class="t2" x="784" y="454" font-size="12">Push alerts</text>
+  <g class="ln" stroke-width="1.5">
+    <path d="M216 152 H270" marker-end="url(#arrow)"/>
+    <path d="M216 240 L270 172" marker-end="url(#arrow)"/>
+    <path d="M216 240 H270" marker-end="url(#arrow)"/>
+    <path d="M216 240 L270 308" marker-end="url(#arrow)"/>
+    <path d="M216 320 L270 328" marker-end="url(#arrow)"/>
+    <path d="M216 440 H270" marker-end="url(#arrow)"/>
+    <path d="M376 352 V406" marker-end="url(#arrow)"/>
+    <path d="M480 160 H534" marker-end="url(#arrow)"/>
+    <path d="M480 240 H534" marker-end="url(#arrow)"/>
+    <path d="M480 320 H534" marker-end="url(#arrow)"/>
+    <path d="M712 160 H766" marker-end="url(#arrow)"/>
+    <path d="M712 240 H766" marker-end="url(#arrow)"/>
+    <path d="M712 308 H766" marker-end="url(#arrow)"/>
+    <path d="M480 440 H534" marker-end="url(#arrow)"/>
+    <path d="M712 440 H766" marker-end="url(#arrow)"/>
+    <path d="M712 424 H740 V336 H766" marker-end="url(#arrow)"/>
+  </g>
+  <g class="t2" font-size="11">
+    <text x="384" y="384" text-anchor="start">reminders</text>
+  </g>
+</svg>

@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600" role="img" aria-labelledby="title desc">
+  <title id="title">G-System topology</title>
+  <desc id="desc">A central server runs the agent sessions and the G-System services. It manages a production host and a worker host over SSH, publishes alerts to an ntfy topic, and serves a desktop app and a phone.</desc>
+  <style>
+    text { font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .mono { font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .bg { fill: #fcfcfd; stroke: #d9d9e0; }
+    .box { fill: #f9f9fb; stroke: #cdced6; }
+    .chip { fill: #f0f0f3; stroke: #d9d9e0; }
+    .t1 { fill: #1c2024; }
+    .t2 { fill: #60646c; }
+    .ln { stroke: #8b8d98; fill: none; }
+    .ar { fill: #8b8d98; }
+    .c1 { fill: #0090ff; } .c2 { fill: #6e56cf; } .c3 { fill: #12a493; }
+    .c4 { fill: #c88515; } .c5 { fill: #e93d82; } .c6 { fill: #45a557; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #111113; stroke: #363a3f; }
+      .box { fill: #18191b; stroke: #43484e; }
+      .chip { fill: #212225; stroke: #363a3f; }
+      .t1 { fill: #edeef0; }
+      .t2 { fill: #b0b4ba; }
+      .ln { stroke: #696e77; }
+      .ar { fill: #696e77; }
+      .c3 { fill: #12a594; } .c4 { fill: #ffc53d; } .c6 { fill: #46a758; }
+    }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+      <path class="ar" d="M0 0 L8 4 L0 8 z"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" x="0.5" y="0.5" width="959" height="599" rx="12"/>
+  <text class="t1" x="32" y="44" font-size="18" font-weight="600">Topology</text>
+  <text class="t2" x="32" y="68" font-size="13">One central server runs the agents and the services, and manages the other hosts.</text>
+
+  <!-- Central server -->
+  <rect class="box" x="32" y="96" width="544" height="464" rx="9.5"/>
+  <text class="t1" x="52" y="124" font-size="14" font-weight="600">Central server</text>
+  <text class="t2" x="52" y="144" font-size="12">Agents live and work here</text>
+
+  <g>
+    <rect class="chip" x="52" y="164" width="246" height="56" rx="6.5"/><rect class="c1" x="52" y="176" width="3" height="32" rx="1.5"/>
+    <text class="t1" x="68" y="187" font-size="13" font-weight="600">Agent sessions</text>
+    <text class="t2" x="68" y="207" font-size="12">Claude Code and Codex</text>
+
+    <rect class="chip" x="310" y="164" width="246" height="56" rx="6.5"/><rect class="c1" x="310" y="176" width="3" height="32" rx="1.5"/>
+    <text class="t1 mono" x="326" y="187" font-size="13" font-weight="600">g-env</text>
+    <text class="t2" x="326" y="207" font-size="12">Skills, settings and hooks</text>
+
+    <rect class="chip" x="52" y="238" width="246" height="56" rx="6.5"/><rect class="c2" x="52" y="250" width="3" height="32" rx="1.5"/>
+    <text class="t1 mono" x="68" y="261" font-size="13" font-weight="600">g-brain</text>
+    <text class="t2" x="68" y="281" font-size="12">Notes, MCP server, REST API</text>
+
+    <rect class="chip" x="310" y="238" width="246" height="56" rx="6.5"/><rect class="c2" x="310" y="250" width="3" height="32" rx="1.5"/>
+    <text class="t1 mono" x="326" y="261" font-size="13" font-weight="600">g-pulse</text>
+    <text class="t2" x="326" y="281" font-size="12">Live data from inlets</text>
+
+    <rect class="chip" x="52" y="312" width="246" height="56" rx="6.5"/><rect class="c4" x="52" y="324" width="3" height="32" rx="1.5"/>
+    <text class="t1 mono" x="68" y="335" font-size="13" font-weight="600">g-spine</text>
+    <text class="t2" x="68" y="355" font-size="12">Alerts, probes and status</text>
+
+    <rect class="chip" x="310" y="312" width="246" height="56" rx="6.5"/><rect class="c5" x="310" y="324" width="3" height="32" rx="1.5"/>
+    <text class="t1 mono" x="326" y="335" font-size="13" font-weight="600">g-voice</text>
+    <text class="t2" x="326" y="355" font-size="12">WhatsApp and web assistant</text>
+
+    <rect class="chip" x="52" y="386" width="246" height="56" rx="6.5"/><rect class="c6" x="52" y="398" width="3" height="32" rx="1.5"/>
+    <text class="t1 mono" x="68" y="409" font-size="13" font-weight="600">g-command-web</text>
+    <text class="t2" x="68" y="429" font-size="12">Web dashboard</text>
+
+    <rect class="chip" x="310" y="386" width="246" height="56" rx="6.5"/><rect class="c6" x="310" y="398" width="3" height="32" rx="1.5"/>
+    <text class="t1 mono" x="326" y="409" font-size="13" font-weight="600">g-browser</text>
+    <text class="t2" x="326" y="429" font-size="12">Shared headful browser</text>
+
+    <rect class="chip" x="52" y="460" width="246" height="56" rx="6.5"/><rect class="c3" x="52" y="472" width="3" height="32" rx="1.5"/>
+    <text class="t1" x="68" y="483" font-size="13" font-weight="600">Instance repo</text>
+    <text class="t2" x="68" y="503" font-size="12">Topology and settings</text>
+
+    <rect class="chip" x="310" y="460" width="246" height="56" rx="6.5"/><rect class="c3" x="310" y="472" width="3" height="32" rx="1.5"/>
+    <text class="t1" x="326" y="483" font-size="13" font-weight="600">Project services</text>
+    <text class="t2" x="326" y="503" font-size="12">Apps started from g-seed</text>
+  </g>
+
+  <!-- Right column -->
+  <rect class="box" x="648" y="96" width="280" height="80" rx="9.5"/>
+  <text class="t1" x="668" y="124" font-size="14" font-weight="600">Production host</text>
+  <text class="t2" x="668" y="146" font-size="12">Deployed projects</text>
+  <text class="t2" x="668" y="164" font-size="12">Wired by g-env-linux</text>
+
+  <rect class="box" x="648" y="192" width="280" height="80" rx="9.5"/>
+  <text class="t1" x="668" y="220" font-size="14" font-weight="600">Worker host</text>
+  <text class="t2" x="668" y="242" font-size="12">Long-running jobs</text>
+  <text class="t2" x="668" y="260" font-size="12">Wired by g-env-linux</text>
+
+  <rect class="box" x="648" y="288" width="280" height="80" rx="9.5"/>
+  <text class="t1" x="668" y="316" font-size="14" font-weight="600">ntfy topic</text>
+  <text class="t2" x="668" y="338" font-size="12">The one fan-out point</text>
+  <text class="t2" x="668" y="356" font-size="12">for every alert</text>
+
+  <rect class="box" x="648" y="384" width="280" height="80" rx="9.5"/>
+  <text class="t1" x="668" y="412" font-size="14" font-weight="600">Mac</text>
+  <text class="t2" x="668" y="434" font-size="12">g-command-mac desktop app</text>
+  <text class="t2" x="668" y="452" font-size="12">Local agent sessions</text>
+
+  <rect class="box" x="648" y="480" width="280" height="80" rx="9.5"/>
+  <text class="t1" x="668" y="508" font-size="14" font-weight="600">Phone</text>
+  <text class="t2" x="668" y="530" font-size="12">Alerts and reminders</text>
+  <text class="t2" x="668" y="548" font-size="12">Voice assistant on WhatsApp</text>
+
+  <!-- Connectors -->
+  <g class="ln" stroke-width="1.5">
+    <path d="M576 136 H646" marker-end="url(#arrow)"/>
+    <path d="M576 232 H646" marker-end="url(#arrow)"/>
+    <path d="M576 328 H646" marker-end="url(#arrow)"/>
+    <path d="M578 424 H646" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <path d="M578 520 H646" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+    <path d="M928 328 H944 V520 H930" marker-end="url(#arrow)"/>
+    <path d="M944 424 H930" marker-end="url(#arrow)"/>
+  </g>
+  <g class="t2" font-size="11" text-anchor="middle">
+    <text x="612" y="128">SSH</text>
+    <text x="612" y="224">SSH</text>
+    <text x="612" y="320">alerts</text>
+    <text x="612" y="416">HTTPS</text>
+    <text x="612" y="512">voice</text>
+  </g>
+</svg>

@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 616" width="960" height="616" role="img" aria-labelledby="title desc">
+  <title id="title">G-System framework and instance</title>
+  <desc id="desc">The framework repos g-core, g-env and g-env-linux, with a macOS layer still to come, read a private instance repo through a resolver. g-core reads the manifest and renders the instance CLAUDE.md. g-env links each file into the home directory, taking the instance override when one exists.</desc>
+  <style>
+    text { font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .mono { font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .bg { fill: #fcfcfd; stroke: #d9d9e0; }
+    .box { fill: #f9f9fb; stroke: #cdced6; }
+    .chip { fill: #f0f0f3; stroke: #d9d9e0; }
+    .t1 { fill: #1c2024; }
+    .t2 { fill: #60646c; }
+    .ln { stroke: #8b8d98; fill: none; }
+    .ar { fill: #8b8d98; }
+    .c1 { fill: #0090ff; } .c2 { fill: #6e56cf; } .c3 { fill: #12a493; }
+    .c4 { fill: #c88515; } .c5 { fill: #e93d82; } .c6 { fill: #45a557; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #111113; stroke: #363a3f; }
+      .box { fill: #18191b; stroke: #43484e; }
+      .chip { fill: #212225; stroke: #363a3f; }
+      .t1 { fill: #edeef0; }
+      .t2 { fill: #b0b4ba; }
+      .ln { stroke: #696e77; }
+      .ar { fill: #696e77; }
+      .c3 { fill: #12a594; } .c4 { fill: #ffc53d; } .c6 { fill: #46a758; }
+    }
+  </style>
+  <defs>
+    <marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto-start-reverse">
+      <path class="ar" d="M0 0 L8 4 L0 8 z"/>
+    </marker>
+  </defs>
+
+    <rect class="bg" x="0.5" y="0.5" width="959" height="615" rx="12"/>
+  <text class="t1" x="32" y="44" font-size="18" font-weight="600">Framework and instance</text>
+  <text class="t2" x="32" y="68" font-size="13">The g- repos hold the code. A private instance repo holds one owner's topology and settings.</text>
+  <rect class="box" x="32" y="96" width="280" height="376" rx="9.5"/>
+  <text class="t1" x="52" y="124" font-size="14" font-weight="600">Framework</text>
+  <text class="t2" x="52" y="144" font-size="12">g- repos, source-available</text>
+  <rect class="chip" x="52" y="164" width="240" height="56" rx="6.5"/><rect class="c1" x="52" y="176" width="3" height="32" rx="1.5"/>
+  <text class="t1 mono" x="68" y="187" font-size="13" font-weight="600">g-core</text>
+  <text class="t2" x="68" y="207" font-size="12">Schema, renderer, examples</text>
+  <rect class="chip" x="52" y="236" width="240" height="56" rx="6.5"/><rect class="c1" x="52" y="248" width="3" height="32" rx="1.5"/>
+  <text class="t1 mono" x="68" y="259" font-size="13" font-weight="600">g-env</text>
+  <text class="t2" x="68" y="279" font-size="12">Bootstrap, skills, resolver</text>
+  <rect class="chip" x="52" y="308" width="240" height="56" rx="6.5"/><rect class="c1" x="52" y="320" width="3" height="32" rx="1.5"/>
+  <text class="t1 mono" x="68" y="331" font-size="13" font-weight="600">g-env-linux</text>
+  <text class="t2" x="68" y="351" font-size="12">Linux wiring, sync timer</text>
+  <rect class="chip" x="52" y="380" width="240" height="56" rx="6.5"/><rect class="c1" x="52" y="392" width="3" height="32" rx="1.5"/>
+  <text class="t1" x="68" y="403" font-size="13" font-weight="600">macOS layer</text>
+  <text class="t2" x="68" y="423" font-size="12">Not published yet</text>
+  <rect class="box" x="592" y="96" width="336" height="376" rx="9.5"/>
+  <text class="t1" x="612" y="124" font-size="14" font-weight="600">Instance repo</text>
+  <text class="t2" x="612" y="144" font-size="12">Private, one per owner</text>
+  <rect class="chip" x="612" y="160" width="296" height="34" rx="4.5"/>
+  <text class="t1 mono" x="624" y="182" font-size="12" font-weight="600">manifest.json</text>
+  <text class="t2" x="896" y="182" font-size="12" text-anchor="end">Hosts and services</text>
+  <rect class="chip" x="612" y="202" width="296" height="34" rx="4.5"/>
+  <text class="t1 mono" x="624" y="224" font-size="12" font-weight="600">presentation.json</text>
+  <text class="t2" x="896" y="224" font-size="12" text-anchor="end">Labels and grouping</text>
+  <rect class="chip" x="612" y="244" width="296" height="34" rx="4.5"/>
+  <text class="t1 mono" x="624" y="266" font-size="12" font-weight="600">conventions.md</text>
+  <text class="t2" x="896" y="266" font-size="12" text-anchor="end">House rules</text>
+  <rect class="chip" x="612" y="286" width="296" height="34" rx="4.5"/>
+  <text class="t1 mono" x="624" y="308" font-size="12" font-weight="600">CLAUDE.md</text>
+  <text class="t2" x="896" y="308" font-size="12" text-anchor="end">Rendered topology</text>
+  <rect class="chip" x="612" y="328" width="296" height="34" rx="4.5"/>
+  <text class="t1 mono" x="624" y="350" font-size="12" font-weight="600">env/</text>
+  <text class="t2" x="896" y="350" font-size="12" text-anchor="end">Override files</text>
+  <rect class="chip" x="612" y="370" width="296" height="34" rx="4.5"/>
+  <text class="t1 mono" x="624" y="392" font-size="12" font-weight="600">skills/</text>
+  <text class="t2" x="896" y="392" font-size="12" text-anchor="end">Instance skills</text>
+  <rect class="chip" x="612" y="412" width="296" height="34" rx="4.5"/>
+  <text class="t1 mono" x="624" y="434" font-size="12" font-weight="600">.env</text>
+  <text class="t2" x="896" y="434" font-size="12" text-anchor="end">Secrets passport</text>
+  <rect class="box" x="352" y="208" width="200" height="264" rx="9.5"/><rect class="c3" x="352" y="224" width="3" height="232" rx="1.5"/>
+  <text class="t1" x="372" y="236" font-size="14" font-weight="600">Resolver</text>
+  <text class="t2" x="372" y="262" font-size="12">1</text>
+  <text class="t1 " x="388" y="262" font-size="12">Legacy file variables</text>
+  <text class="t2" x="372" y="282" font-size="12">2</text>
+  <text class="t1 mono " x="388" y="282" font-size="12">G_INSTANCE</text>
+  <text class="t2" x="372" y="302" font-size="12">3</text>
+  <text class="t1 mono " x="388" y="302" font-size="12">../gp-core</text>
+  <text class="t2" x="372" y="322" font-size="12">4</text>
+  <text class="t1 mono " x="388" y="322" font-size="12">../gcore</text>
+  <text class="t2" x="372" y="342" font-size="12">5</text>
+  <text class="t1 " x="388" y="342" font-size="12">Framework defaults</text>
+  <rect class="chip" x="368" y="368" width="168" height="1" rx="0"/>
+  <text class="t1" x="372" y="396" font-size="14" font-weight="600">Overlay</text>
+  <text class="t2" x="372" y="418" font-size="12">env/&lt;path&gt; replaces the</text>
+  <text class="t2" x="372" y="436" font-size="12">framework file whole,</text>
+  <text class="t2" x="372" y="454" font-size="12">with no merging</text>
+  <rect class="box" x="32" y="512" width="896" height="72" rx="9.5"/>
+  <text class="t1" x="52" y="540" font-size="14" font-weight="600">Each host's home directory</text>
+  <text class="t2 mono" x="52" y="564" font-size="12">~/.claude/settings.json</text>
+  <text class="t2 mono" x="276" y="564" font-size="12">~/.gitconfig</text>
+  <text class="t2 mono" x="412" y="564" font-size="12">~/.ssh/config</text>
+  <text class="t2 mono" x="556" y="564" font-size="12">~/.claude/skills/</text>
+  <text class="t2" x="716" y="564" font-size="12">Session context</text>
+  <g class="ln" stroke-width="1.5">
+    <path d="M312 188 H590" marker-end="url(#arrow)"/>
+    <path d="M590 284 H554" marker-end="url(#arrow)"/>
+    <path d="M352 268 H314" marker-end="url(#arrow)"/>
+    <path d="M172 472 V510" marker-end="url(#arrow)"/>
+    <path d="M452 472 V510" marker-end="url(#arrow)"/>
+  </g>
+  <g class="t2" font-size="11">
+    <text x="452" y="180" text-anchor="middle">reads manifest, renders CLAUDE.md</text>
+  </g>
+</svg>
