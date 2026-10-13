@@ -44,7 +44,7 @@ g-brain holds four packages beside the corpus. They share a repo because they sh
 | g-todos | Holds dated commitments and sends the reminders |
 | g-voice | Runs the WhatsApp and web assistant |
 
-Repos named `gp-` are my own projects built on it.
+Repos named `gp-` are my own projects built on it, such as [gp-tv](https://github.com/Volcanex/gp-tv), the software for the Raspberry Pi behind my TV.
 
 ## Framework and instance
 
