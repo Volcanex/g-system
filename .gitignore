@@ -1,2 +1,7 @@
 gp-core/
 gcore/
+
+# Secrets stay local: an .env never goes to a public repo.
+.env
+.env.*
+!.env.example
